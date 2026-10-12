@@ -1,58 +1,77 @@
-# 🏄 Surf Decision Gran Canaria (v11.0)
+# 🏄 Surf Decision Gran Canaria (DSS)
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://surf-dashboard-gc.streamlit.app/)
-![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=flat&logo=python&logoColor=white)
-![ULPGC](https://img.shields.io/badge/University-ULPGC-005596)
+[![Python Version](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![UI Framework](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![Visuals](https://img.shields.io/badge/Visuals-Plotly%20%7C%20PyDeck-informational.svg)](https://plotly.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**El asistente inteligente para surfistas en Gran Canaria.**
+An intelligent oceanographic **Decision Support System (DSS)** and real-time dashboard for surfers across Gran Canaria's prime breaks (La Cícer, El Confital, La Laja, San Andrés).
 
-Este proyecto no es solo un dashboard meteorológico; es un **Sistema de Apoyo a la Decisión (DSS)** que traduce datos oceanográficos complejos en veredictos humanos simples: **"¡Al agua ya!"** o **"Mejor quédate en casa"**.
+Instead of forcing users to decipher raw buoy tables and meteorological charts, this application processes multi-variable oceanographic forecasts into actionable decisions: **"Paddle Out Now!"** vs. **"Stay Home"**.
 
-![Demo de la Aplicación](screenshot.png)
-
----
-
-## 🚀 ¿Qué hace este proyecto?
-
-Desarrollado por un estudiante de **Ciencia e Ingeniería de Datos de la ULPGC**, este dashboard resuelve el problema de la fragmentación de información para los surfistas locales.
-
-*   **Veredicto Humano Dinámico:** Algoritmo heurístico que analiza altura de ola, periodo y viento para generar un consejo en lenguaje natural.
-*   **Semáforo de Horas:** Visualización rápida de la "Ventana de Oro" (mejor momento para surfear en las próximas 24h).
-*   **Validación con Webcam:** Integración directa con webcams en vivo para confirmación visual antes de salir de casa.
-*   **Análisis Multivariante:** Cruce de datos en tiempo real de las APIs de Open-Meteo (Marine & Forecast).
-*   **Geolocalización:** Mapas técnicos de los spots principales: La Cícer, El Confital, La Laja y San Andrés.
-
-## 🛠️ Stack Tecnológico
-
-*   **Lenguaje:** Python 3.13
-*   **Framework:** Streamlit
-*   **Procesamiento:** Pandas & NumPy
-*   **Visualización:** Plotly Express & PyDeck (Mapas 3D)
-*   **Base de Datos:** SQLite3 (Persistencia de consultas e históricos)
-
-## 📥 Instalación
-
-Si quieres ejecutarlo en local:
-
-1. **Clonar el repo:**
-   ```bash
-   git clone https://github.com/yonillo/Surf-Dashboard-gc.git
-   cd Surf-Dashboard-gc
-   ```
-
-2. **Instalar librerías:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Ejecutar:**
-   ```bash
-   python -m streamlit run app.py
-   ```
+![Application Screenshot](screenshot.png)
 
 ---
 
-## 📧 Contacto
-**Yone Suarez** - [yonillo43@gmail.com](mailto:yonillo43@gmail.com)  
-Estudiante de Ciencia e Ingeniería de Datos | **ULPGC**  
-Repo: [github.com/yonillo/Surf-Dashboard-gc](https://github.com/yonillo/Surf-Dashboard-gc)
+## ⚡ Core Features
+
+- **Dynamic Heuristic Decision Engine:** Synthesizes wave height ($H_s$), wave period ($T_p$), wind speed, and direction against spot-specific bathymetry profiles.
+- **Golden Hour Traffic-Light Forecast:** 24-hour predictive breakdown identifying the peak tidal and swell windows.
+- **Live Webcam Validation:** In-app webcam feeds for instant visual ground-truth confirmation before commuting.
+- **Multivariate Ingestion:** Automated querying of [Open-Meteo](https://open-meteo.com/) Marine & Weather forecast APIs.
+- **Geospatial Spot Mapping:** Interactive 3D maps and technical coordinates built with PyDeck and Leaflet.
+- **Historical Query Persistence:** SQLite backend tracking spot condition trends and query logs.
+
+---
+
+## 🏗️ Tech Stack
+
+- **Application & Dashboard:** Python, Streamlit
+- **Data Engineering & Analysis:** Pandas, NumPy
+- **Interactive Visualizations:** Plotly Express, PyDeck (3D maps)
+- **Data Persistence:** SQLite3
+- **APIs:** Open-Meteo Marine API, Open-Meteo Weather API
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.10+
+- `pip`
+
+### Installation & Local Run
+
+```bash
+# 1. Clone repository
+git clone https://github.com/yonillo/Surf-Dashboard-gc.git
+cd Surf-Dashboard-gc
+
+# 2. Create virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# 3. Install requirements
+pip install -r requirements.txt
+
+# 4. Launch Streamlit app
+streamlit run app.py
+```
+
+---
+
+## 🌐 Live Deployment
+
+Access the production deployment on Streamlit Cloud:  
+👉 **[surf-dashboard-gc.streamlit.app](https://surf-dashboard-gc.streamlit.app/)**
+
+---
+
+## 👨‍💻 Author
+
+**Yone Suárez Viera**  
+Data Science & Engineering Student @ ULPGC | Gran Canaria 🏝️  
+- **LinkedIn:** [yone-suarez](https://linkedin.com/in/yone-suarez)
+- **Portfolio:** [yonesuarez.es](https://yonesuarez.es)

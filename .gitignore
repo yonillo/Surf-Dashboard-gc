@@ -2,15 +2,36 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+dist/
+
+# Virtual Environments
+.venv/
 venv/
+env/
+ENV/
+
+# Environment Variables & Keys
 .env
+.env.local
 
 # Streamlit
 .streamlit/
 
-# Database
+# Database & SQLite
+*.db
+*.sqlite
+*.sqlite3
 surf_data.db
 
-# OS
+# OS & Editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+
+# Logs & Dumps
+*.log
+*.tmp
